@@ -13,3 +13,24 @@
 body{
     background-color: var(--corPrincipal);
 }
+
+nav{
+    background-color: lightgray;
+}
+
+main{
+    margin: auto;
+    width: 80%;
+    background-color: rgb(129, 139, 139);
+}
+
+section{
+    margin: 2%;
+    display: inline-flex;
+    width: 45%;
+    background-color: aliceblue;
+}
+
+textarea{
+    width: 100%;
+}
