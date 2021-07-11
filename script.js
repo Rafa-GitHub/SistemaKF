@@ -1,25 +1,22 @@
 let listaBomba = []
 let saida = document.getElementById("txtSaida")
 
-function inserirReparo(){
-    let procura = listaBomba.indexOf("Reparo")
+function busca(item){
+    let procura = listaBomba.indexOf(item)
     if(procura > -1){
         listaBomba.splice(procura, 1)
         mostrarSaida()
     }else{
-        listaBomba.push("Reparo")
+        listaBomba.push(item)
         mostrarSaida()
     }
 }
+
+function inserirReparo(){
+    busca("01 Reparo Bomba Alta")
+}
 function inserirEsfera(){
-    let procura = listaBomba.indexOf("Esfera")
-    if(procura > -1){
-        listaBomba.splice(procura, 1)
-        mostrarSaida()
-    }else{
-        listaBomba.push("Esfera")
-        mostrarSaida()
-    }
+    busca("03 Esferas")
 }
 
 function mostrarSaida(){
