@@ -31,6 +31,11 @@ function inserirEsfera() {
 function dadosCliente() {
     let txtCli = document.getElementById("txtCli")
     let txtCliente = txtCli.value.toUpperCase()
+    if(txtCliente == ""){
+        let nome = window.prompt("Insira o nome do CLIENTE!")
+        document.getElementById("txtCli").value = `${nome}`
+        txtCliente = nome
+    }
     let txtPla = document.getElementById("txtPla")
     let txtPlaca = txtPla.value.toUpperCase()
     let txtKm = document.getElementById("txtKm")
