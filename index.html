@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,20 @@
     <title>Sistema KF</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <header>
         <h2>Dados Cliente</h2>
-        <p>Nome: <input type="text" name="cliente" id="txtCli" class="dados">
-            Placa: <input type="text" name="placa" id="txtPla" class="dados">
-            KM: <input type="number" name="km" id="txtKm" class="dados">Veiculo: <input type="text" name="veiculo" id="txtVei" class="dados">
+        <p>Nome: <input type="text" name="cliente" id="txtCli" class="dados" oninput="mostrarSaida()">
+            Placa: <input type="text" name="placa" id="txtPla" class="dados" oninput="mostrarSaida()">
+            KM: <input type="number" name="km" id="txtKm" class="dados" oninput="mostrarSaida()">Veiculo: <input
+                type="text" name="veiculo" id="txtVei" class="dados" oninput="mostrarSaida()">
         </p>
     </header>
     <hr>
     <h2>Bomba Alta Pressao</h2>
-    <p>Numero: <input type="text" name="bomba" id="txtbba" class="dados">
-        Marca: <input type="text" name="marca" id="txtmar" class="dados">
+    <p>Numero: <input type="text" name="bomba" id="txtbba" class="dados" oninput="mostrarSaida()">
+        Marca: <input type="text" name="marca" id="txtmar" class="dados" oninput="mostrarSaida()">
     </p>
     <hr>
     <section>
@@ -43,4 +46,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
