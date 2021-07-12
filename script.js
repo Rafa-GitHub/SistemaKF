@@ -25,8 +25,14 @@ function inserirEsfera(){
 
 function dadosCliente(){
     let txtCli = document.getElementById("txtCli")
-    let txtCliente = txtCli.value
-    saida.innerHTML = `${txtCliente}  \n`
+    let txtCliente = txtCli.value.toUpperCase()
+    let txtPla = document.getElementById("txtPla")
+    let txtPlaca = txtPla.value.toUpperCase()
+    let txtKm = document.getElementById("txtKm")
+    let km = txtKm.value.toUpperCase()
+    let txtVei = document.getElementById("txtVei")
+    let txtVeiculo = txtVei.value.toUpperCase()
+    saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n`
 }
 
 
