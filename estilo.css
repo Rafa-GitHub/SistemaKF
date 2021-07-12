@@ -10,6 +10,10 @@
     padding: 0%;
 }
 
+hr{
+    margin: 1%;
+}
+
 body{
     background-color: var(--corPrincipal);
 }

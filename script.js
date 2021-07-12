@@ -1,8 +1,9 @@
 let listaBomba = []
 let saida = document.getElementById("txtSaida")
 
-/*verifica a existencia do item na lista,
-passado como parametro pelos botoes.
+/*
+    verifica a existencia do item na lista,
+    passado como parametro pelos botoes.
 */
 function busca(item){
     let procura = listaBomba.indexOf(item)
@@ -23,6 +24,10 @@ function inserirEsfera(){
     busca("03 Esferas")
 }
 
+/*
+    recebe dados do cliente,
+    valida campos nulos para saida.
+*/ 
 function dadosCliente(){
     let txtCli = document.getElementById("txtCli")
     let txtCliente = txtCli.value.toUpperCase()
@@ -34,9 +39,6 @@ function dadosCliente(){
     let txtVeiculo = txtVei.value.toUpperCase()
     saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n`
 }
-
-
-
 
 //mostra saida na area de texto
 function mostrarSaida(){
