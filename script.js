@@ -31,10 +31,10 @@ function inserirEsfera() {
 function dadosCliente() {
     let txtCli = document.getElementById("txtCli")
     let txtCliente = txtCli.value.toUpperCase()
-    if(txtCliente == ""){
+    if (txtCliente == "") {
         let nome = window.prompt("Insira o nome do CLIENTE!")
         document.getElementById("txtCli").value = `${nome}`
-        txtCliente = nome
+        txtCliente = nome.toLocaleUpperCase()
     }
     let txtPla = document.getElementById("txtPla")
     let txtPlaca = txtPla.value.toUpperCase()
@@ -42,8 +42,25 @@ function dadosCliente() {
     let km = txtKm.value.toUpperCase()
     let txtVei = document.getElementById("txtVei")
     let txtVeiculo = txtVei.value.toUpperCase()
-    
-    saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
+
+    if (txtPlaca == "" && txtVeiculo != "" && km != "") {
+        saida.innerHTML = `Cliente.: ${txtCliente}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
+    } else if (km == "" && txtPlaca != "" && txtVeiculo != "") {
+        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
+    } else if (txtVeiculo == "" && txtPlaca != "" && km != "") {
+        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nKM.:${km}\n────────────────────────────\n`
+    } else if (txtPlaca == "" && km == "" && txtVeiculo != "") {
+        saida.innerHTML = `Cliente.: ${txtCliente}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
+    } else if (txtPlaca == "" && txtVeiculo == "" && km != "") {
+        saida.innerHTML = `Cliente.: ${txtCliente}\nKM.:${km}\n────────────────────────────\n`
+    } else if (km == "" && txtVeiculo == "" && txtPlaca != "") {
+        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\n────────────────────────────\n`
+    } else if (txtPlaca == "" && txtVeiculo == "" && km == "") {
+        saida.innerHTML = `Cliente.: ${txtCliente}\n────────────────────────────\n`
+    } else {
+        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
+    }
+
 }
 
 //mostra saida na area de texto
