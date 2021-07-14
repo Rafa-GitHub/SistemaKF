@@ -1,4 +1,6 @@
 let listaBomba = []
+let listaMaoObra = []
+let listaBico = []
 let saida = document.getElementById("txtSaida")
 
 /*
