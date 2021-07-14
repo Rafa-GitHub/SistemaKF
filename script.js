@@ -3,6 +3,7 @@ let listaMaoObra = []
 let listaBico = []
 let saida = document.getElementById("txtSaida")
 
+
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
@@ -45,6 +46,9 @@ function dadosCliente() {
     let txtVei = document.getElementById("txtVei")
     let txtVeiculo = txtVei.value.toUpperCase()
 
+    /*
+        impressao no text area dos dados de cliente e lista de pecas
+    */     
     if (txtPlaca == "" && txtVeiculo != "" && km != "") {
         saida.innerHTML = `Cliente.: ${txtCliente}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
     } else if (km == "" && txtPlaca != "" && txtVeiculo != "") {
@@ -65,10 +69,19 @@ function dadosCliente() {
 
 }
 
+function dadosServico(){
+    let txtbba = document.getElementById("txtbba")
+    let txtBomba = txtbba.value.toLocaleUpperCase()
+    let selMar = document.getElementById("marca")
+    let marca = selMar.value.toLocaleUpperCase()
+    saida.innerHTML += `────────────────────────────\n` + `` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca
+}
+
 //mostra saida na area de texto
 function mostrarSaida() {
     dadosCliente()
     for (let i = 0; i < listaBomba.length; i++) {
         saida.innerHTML += listaBomba[i] + '\n'
     }
+    dadosServico()
 }

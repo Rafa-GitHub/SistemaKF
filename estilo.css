@@ -10,6 +10,11 @@
     padding: 0%;
 }
 
+main{
+    margin: auto;
+    max-width: 90%;
+}
+
 hr{
     margin: 1%;
 }

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <main>
     <header>
         <h2>Dados Cliente</h2>
         <p>Nome: <input type="text" name="cliente" id="txtCli" class="dados" oninput="mostrarSaida()">
@@ -21,7 +22,7 @@
     <hr>
     <h2>Bomba Alta Pressao</h2>
     <p>Numero: <input type="text" name="bomba" id="txtbba" class="dados" oninput="mostrarSaida()">
-        Marca: <select name="marca" id="marca">
+        Marca: <select name="marca" id="marca" oninput="mostrarSaida()">
             <option value="marca" selected></option>
             <option value="bosch">Bosch</option>
             <option value="delphi">Delphi</option>
@@ -45,7 +46,7 @@
             <textarea name="txtSaida" id="txtSaida" disabled="disabled" rows="10"></textarea>
         </div>
     </section>
-
+</main>
     <footer>
         <p>By RafaKraetzer</p>
     </footer>
