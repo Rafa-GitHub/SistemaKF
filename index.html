@@ -21,7 +21,13 @@
     <hr>
     <h2>Bomba Alta Pressao</h2>
     <p>Numero: <input type="text" name="bomba" id="txtbba" class="dados" oninput="mostrarSaida()">
-        Marca: <input type="text" name="marca" id="txtmar" class="dados" oninput="mostrarSaida()">
+        Marca: <select name="marca" id="marca">
+            <option value="marca" selected></option>
+            <option value="bosch">Bosch</option>
+            <option value="delphi">Delphi</option>
+            <option value="siemens">Siemens</option>
+            <option value="denso">Denso</option>
+        </select>
     </p>
     <hr>
     <section>
@@ -36,7 +42,7 @@
             <input type="button" value="Clique aqui">
         </div>
         <div>
-            <textarea name="txtSaida" id="txtSaida" rows="10"></textarea>
+            <textarea name="txtSaida" id="txtSaida" disabled="disabled" rows="10"></textarea>
         </div>
     </section>
 
