@@ -74,8 +74,10 @@ function dadosServico(){
     let txtBomba = txtbba.value.toLocaleUpperCase()
     let selMar = document.getElementById("marca")
     let marca = selMar.value.toLocaleUpperCase()
-    
-    saida.innerHTML += `────────────────────────────\n` + `` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca
+    if(txtBomba != "" && marca != "Selecione"){
+        saida.innerHTML += `────────────────────────────\n` + `` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca
+    }
+    /*saida.innerHTML += `────────────────────────────\n` + `` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca*/
 }
 
 //mostra saida na area de texto
