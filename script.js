@@ -3,7 +3,6 @@ let listaMaoObra = []
 let listaBico = []
 let saida = document.getElementById("txtSaida")
 
-
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
@@ -17,6 +16,11 @@ function busca(item) {
         listaBomba.push(item)
         mostrarSaida()
     }
+
+}
+//limpa todos os dados
+function limpar(){
+    /*em construcao*/
 }
 
 //botoes para inserir item na lista
@@ -74,17 +78,23 @@ function dadosServico(){
     let txtBomba = txtbba.value.toLocaleUpperCase()
     let selMar = document.getElementById("marca")
     let marca = selMar.value.toLocaleUpperCase()
-    if(txtBomba != "" && marca != "Selecione"){
-        saida.innerHTML += `────────────────────────────\n` + `` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca
+    if(txtBomba != "" && marca != ""){
+        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca
+    } else if(txtBomba != "" && marca == ""){
+        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba
+    } else if(txtBomba == "" && marca != ""){
+        saida.innerHTML += `────────────────────────────\n` + `Marca: ` + marca
     }
-    /*saida.innerHTML += `────────────────────────────\n` + `` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca*/
 }
 
 //mostra saida na area de texto
 function mostrarSaida() {
+   
     dadosCliente()
     for (let i = 0; i < listaBomba.length; i++) {
         saida.innerHTML += listaBomba[i] + '\n'
     }
     dadosServico()
+    
+   
 }

@@ -10,43 +10,57 @@
 </head>
 
 <body>
-    <main>
     <header>
-        <h2>Dados Cliente</h2>
-        <p>Nome: <input type="text" name="cliente" id="txtCli" class="dados" oninput="mostrarSaida()">
-            Placa: <input type="text" name="placa" id="txtPla" class="dados" oninput="mostrarSaida()">
-            KM: <input type="number" name="km" id="txtKm" class="dados" oninput="mostrarSaida()">Veiculo: <input
-                type="text" name="veiculo" id="txtVei" class="dados" oninput="mostrarSaida()">
-        </p>
+        <section>
+            <div id="dadosCliente">
+                <h2>Dados Cliente</h2>
+                <p>Nome: <input type="text" name="cliente" id="txtCli" class="dados" oninput="mostrarSaida()">
+                    Placa: <input type="text" name="placa" id="txtPla" class="dados" oninput="mostrarSaida()">
+                    KM: <input type="number" name="km" id="txtKm" class="dados" oninput="mostrarSaida()">Veiculo: <input
+                        type="text" name="veiculo" id="txtVei" class="dados" oninput="mostrarSaida()">
+                </p>
+            </div>
+            <div id="autor">
+                <select name="autor" id="autor">
+                    <option value=""></option>
+                    <option value="kraetz">Kraetzer</option>
+                    <option value="kraetz">Claudio</option>
+                    <option value="kraetz">Vanio</option>
+                    <option value="kraetz">Kaleo</option>
+                    <option value="kraetz">Rodrigo</option>
+                </select>
+            </div>
+        </section>
     </header>
     <hr>
-    <h2>Bomba Alta Pressao</h2>
-    <p>Numero: <input type="text" name="bomba" id="txtbba" class="dados" oninput="mostrarSaida()">
-        Marca: <select name="" id="marca" value="sel" oninput="mostrarSaida()">
-            <option value="Selecione">Selecione</option>
-            <option value="bosch">Bosch</option>
-            <option value="delphi">Delphi</option>
-            <option value="siemens">Siemens</option>
-            <option value="denso">Denso</option>
-        </select>
-    </p>
-    <hr>
-    <section>
-        <div>
-            <input type="button" value="Reparo Bomba" onclick="inserirReparo()">
-            <input type="button" value="Esfera Bomba" onclick="inserirEsfera()">
-            <input type="button" value="Clique aqui">
-            <input type="button" value="Clique aqui">
-            <input type="button" value="Clique aqui">
-            <input type="button" value="Clique aqui">
-            <input type="button" value="Clique aqui">
-            <input type="button" value="Clique aqui">
-        </div>
-        <div>
-            <textarea name="txtSaida" id="txtSaida" disabled="disabled" rows="10"></textarea>
-        </div>
-    </section>
-</main>
+    <main>
+        <h2>Bomba Alta Pressao</h2>
+        <p>Numero: <input type="text" name="bomba" id="txtbba" class="dados" oninput="mostrarSaida()">
+            Marca: <select name="" id="marca" value="sel" oninput="mostrarSaida()">
+                <option value=""></option>
+                <option value="bosch">Bosch</option>
+                <option value="delphi">Delphi</option>
+                <option value="siemens">Siemens</option>
+                <option value="denso">Denso</option>
+            </select>
+        </p>
+        <hr>
+        <section>
+            <div>
+                <input type="button" value="Reparo Bomba" onclick="inserirReparo()">
+                <input type="button" value="Esfera Bomba" onclick="inserirEsfera()">
+                <input type="button" value="Clique aqui">
+                <input type="button" value="Clique aqui">
+                <input type="button" value="Clique aqui">
+                <input type="button" value="Clique aqui">
+                <input type="button" value="Clique aqui">
+                <input type="button" value="Clique aqui">
+            </div>
+            <div>
+                <textarea name="txtSaida" id="txtSaida" disabled="disabled" rows="10"></textarea>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>By RafaKraetzer</p>
     </footer>

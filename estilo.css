@@ -39,6 +39,21 @@ div{
     width: 50%;
 }
 
+#dadosCliente{
+    width: 90%;
+    background-color: aqua;
+}
+
+#dadosCliente > p{
+    display: inline;
+}
+#autor{
+    width: 15%;
+}
+
+#autor > select{
+    width: 100%;
+}
 textarea{
     width: 100%;
 }
