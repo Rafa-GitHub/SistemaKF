@@ -1,3 +1,4 @@
+let qtd = 0
 let listaBomba = []
 let listaMaoObra = []
 let listaBico = []
@@ -8,6 +9,43 @@ let saida = document.getElementById("txtSaida")
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
 */
+function quantidade(num){
+    switch(num){
+        case 1:
+            qtd = "01"
+            break
+        case 2:
+            qtd = "02"
+            break
+        case 3:
+            qtd = "03"
+            break
+        case 4:
+            qtd = "04"
+            break
+        case 5:
+            qtd = "05"
+            break
+        case 6:
+            qtd = "06"
+            break
+        default:
+    }
+}
+function validaQuantidade(){
+    if(qtd == 0){
+        qtd = window.prompt("Informe a Quantidade: ")
+        while(qtd > 06 || qtd < 1){
+            qtd = window.prompt("A quantidade deve ser de 01 a 06!")
+        }
+    }
+}
+
+function trocaBotao(){
+    /**/
+    window.alert("Trocou") 
+}
+
 function busca(item) {
     let procura = listaBomba.indexOf(item)
     if (procura > -1) {
@@ -17,7 +55,6 @@ function busca(item) {
         listaBomba.push(item)
         mostrarSaida()
     }
-
 }
 //limpa todos os dados
 function limpar() {
@@ -26,10 +63,12 @@ function limpar() {
 
 //botoes para inserir item na lista
 function inserirReparo() {
-    busca("01 Reparo Bomba Alta")
+    validaQuantidade()
+    busca(qtd + " Reparo Bomba Alta")
 }
 function inserirEsfera() {
-    busca("03 Esferas")
+    validaQuantidade()
+    busca(qtd + " Esferas")
 }
 
 /*
@@ -100,12 +139,9 @@ function dadosServico() {
 
 //mostra saida na area de texto
 function mostrarSaida() {
-
     dadosCliente()
     for (let i = 0; i < listaBomba.length; i++) {
         saida.innerHTML += listaBomba[i] + '\n'
     }
     dadosServico()
-
-
 }

@@ -21,6 +21,7 @@
                 </p>
             </div>
             <div id="autor">
+                <p>Autor</p>
                 <select name="selAutor" id="selAutor" oninput="mostrarSaida()">
                     <option value="" selected></option>
                     <option value="Kraetzer">Kraetzer</option>
@@ -45,6 +46,14 @@
         </p>
         <hr>
         <section>
+            <div id="quantidade">
+                <input type="button" id="botao01" value="01" onclick="quantidade(1)">
+                <input type="button" id="botao02" value="02" onclick="quantidade(2)">
+                <input type="button" value="03" onclick="quantidade(3)">
+                <input type="button" value="04" onclick="quantidade(4)">
+                <input type="button" value="05" onclick="quantidade(5)">
+                <input type="button" value="06" onclick="quantidade(6)">
+            </div>
             <div>
                 <input type="button" value="Reparo Bomba" onclick="inserirReparo()">
                 <input type="button" value="Esfera Bomba" onclick="inserirEsfera()">
