@@ -1,6 +1,7 @@
 let listaBomba = []
 let listaMaoObra = []
 let listaBico = []
+let listaDadosServico = []
 let saida = document.getElementById("txtSaida")
 
 /*
@@ -19,7 +20,7 @@ function busca(item) {
 
 }
 //limpa todos os dados
-function limpar(){
+function limpar() {
     /*em construcao*/
 }
 
@@ -52,7 +53,7 @@ function dadosCliente() {
 
     /*
         impressao no text area dos dados de cliente e lista de pecas
-    */     
+    */
     if (txtPlaca == "" && txtVeiculo != "" && km != "") {
         saida.innerHTML = `Cliente.: ${txtCliente}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
     } else if (km == "" && txtPlaca != "" && txtVeiculo != "") {
@@ -73,28 +74,38 @@ function dadosCliente() {
 
 }
 
-function dadosServico(){
+function dadosServico() {
     let txtbba = document.getElementById("txtbba")
     let txtBomba = txtbba.value.toLocaleUpperCase()
     let selMar = document.getElementById("marca")
     let marca = selMar.value.toLocaleUpperCase()
-    if(txtBomba != "" && marca != ""){
+    let txtAut = document.getElementById("selAutor")
+    let autor = txtAut.value.toLocaleUpperCase()
+    if (txtBomba != "" && marca != "" && autor != "") {
+        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
+    } else if (txtBomba != "" && marca != "" && autor == "") {
         saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca
-    } else if(txtBomba != "" && marca == ""){
-        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba
-    } else if(txtBomba == "" && marca != ""){
+    } else if (txtBomba != "" && marca == "" && autor != "") {
+        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Autor: ` + autor
+    } else if (txtBomba == "" && marca != "" && autor == "") {
         saida.innerHTML += `────────────────────────────\n` + `Marca: ` + marca
+    } else if (txtBomba == "" && marca == "" && autor != "") {
+        saida.innerHTML += `────────────────────────────\n` + `Autor: ` + autor
+    } else if (txtBomba != "" && marca == "" && autor == "") {
+        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba
+    } else if (txtBomba == "" && marca != "" && autor != "") {
+        saida.innerHTML += `────────────────────────────\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
     }
 }
 
 //mostra saida na area de texto
 function mostrarSaida() {
-   
+
     dadosCliente()
     for (let i = 0; i < listaBomba.length; i++) {
         saida.innerHTML += listaBomba[i] + '\n'
     }
     dadosServico()
-    
-   
+
+
 }
