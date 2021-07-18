@@ -39,14 +39,18 @@ div{
     width: 50%;
 }
 
-#quantidade{
+.quantidade{
     width: 10%;
     background-color: gray;
-    display: grid;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
-#quantidade > input{
-    width: 80%;
+.quantidade > input{
+    width: 50%;
     margin: 5% auto;
+    display: inline-flexbox;
 }
 
 #dadosCliente{

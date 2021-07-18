@@ -46,13 +46,14 @@
         </p>
         <hr>
         <section>
-            <div id="quantidade">
-                <input type="button" value="01" onclick="quantidade(1)">
-                <input type="button" value="02" onclick="quantidade(2)">
-                <input type="button" value="03" onclick="quantidade(3)">
-                <input type="button" value="04" onclick="quantidade(4)">
-                <input type="button" value="05" onclick="quantidade(5)">
-                <input type="button" value="06" onclick="quantidade(6)">
+            <div class="quantidade">
+                01<input type="radio" name="radQtd" id="rad01" class="radios" oninput="radios(1)" checked>
+                02<input type="radio" name="radQtd" id="rad02" class="radios" oninput="radios(2)">
+                03<input type="radio" name="radQtd" id="rad03" class="radios"
+                oninput="radios(3)">
+                04<input type="radio" name="radQtd" id="rad04" class="radios" oninput="radios(4)">
+                05<input type="radio" name="radQtd" id="rad05" class="radios" oninput="radios(5)">
+                06<input type="radio" name="radQtd" id="rad06" class="radios" oninput="radios(6)">
             </div>
             <div>
                 <input type="button" value="Reparo Bomba" onclick="inserirReparo()">

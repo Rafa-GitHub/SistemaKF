@@ -1,16 +1,19 @@
-let qtd = 0
 let listaBomba = []
 let listaMaoObra = []
 let listaBico = []
 let listaDadosServico = []
 let saida = document.getElementById("txtSaida")
+let qtd = 0
 
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
 */
-function quantidade(num){
-    switch(num){
+function radios(radios){
+    switch(radios){
+        case 0:
+            qtd = "01"
+            break
         case 1:
             qtd = "01"
             break
@@ -29,22 +32,10 @@ function quantidade(num){
         case 6:
             qtd = "06"
             break
-        default:
     }
-}
-function validaQuantidade(){
-    if(qtd == 0){
-        qtd = window.prompt("Informe a Quantidade: ")
-        while(qtd > 06 || qtd < 1){
-            qtd = window.prompt("A quantidade deve ser de 01 a 06!")
-        }
-    }
+    
 }
 
-function trocaBotao(){
-    /**/
-    window.alert("Trocou") 
-}
 
 function busca(item) {
     let procura = listaBomba.indexOf(item)
@@ -63,11 +54,10 @@ function limpar() {
 
 //botoes para inserir item na lista
 function inserirReparo() {
-    validaQuantidade()
+    radios(qtd)
     busca(qtd + " Reparo Bomba Alta")
 }
 function inserirEsfera() {
-    validaQuantidade()
     busca(qtd + " Esferas")
 }
 
