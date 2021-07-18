@@ -36,11 +36,11 @@ function radios(radios){
     
 }
 
-
-function busca(item) {
+function busca(item, botao) {
     let procura = listaBomba.indexOf(item)
     if (procura > -1) {
         listaBomba.splice(procura, 1)
+        botao.style.backgroundColor = "white"
         mostrarSaida()
     } else {
         listaBomba.push(item)
@@ -53,12 +53,15 @@ function limpar() {
 }
 
 //botoes para inserir item na lista
-function inserirReparo() {
+function inserirReparo(botao) {
+    botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd + " Reparo Bomba Alta")
+    busca(qtd + " Reparo Bomba Alta", botao)
 }
-function inserirEsfera() {
-    busca(qtd + " Esferas")
+function inserirEsfera(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd + " Esferas", botao)
 }
 
 /*
@@ -68,7 +71,7 @@ function inserirEsfera() {
 function dadosCliente() {
     let txtCli = document.getElementById("txtCli")
     let txtCliente = txtCli.value.toUpperCase()
-    if (txtCliente == "") {
+    while (txtCliente == "") {
         let nome = window.prompt("Insira o nome do CLIENTE!")
         document.getElementById("txtCli").value = `${nome}`
         txtCliente = nome.toLocaleUpperCase()
