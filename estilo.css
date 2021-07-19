@@ -40,17 +40,20 @@ div{
 }
 
 .quantidade{
-    width: 10%;
+    width: 8%;
+    padding: 0.5%;
     background-color: gray;
     display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .quantidade > input{
-    width: 50%;
-    margin: 5% auto;
-    display: inline-flexbox;
+    width: 40%;
+    margin: 2% auto;
+    
 }
 
 #dadosCliente{
