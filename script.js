@@ -4,7 +4,6 @@ let listaBico = []
 let listaDadosServico = []
 let saida = document.getElementById("txtSaida")
 let qtd = 0
-
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
@@ -33,11 +32,10 @@ function radios(radios){
             qtd = "06"
             break
     }
-    
 }
 
 function busca(item, botao) {
-    let procura = listaBomba.indexOf(item)
+    let procura = listaBomba.indexOf(item)   
     if (procura > -1) {
         listaBomba.splice(procura, 1)
         botao.style.backgroundColor = "white"
