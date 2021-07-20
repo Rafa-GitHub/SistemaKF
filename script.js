@@ -11,40 +11,47 @@ let qtd = 0
 function radios(radios){
     switch(radios){
         case 0:
-            qtd = "01"
+            qtd = 1
             break
         case 1:
-            qtd = "01"
+            qtd = 1
             break
         case 2:
-            qtd = "02"
+            qtd = 2
             break
         case 3:
-            qtd = "03"
+            qtd = 3
             break
         case 4:
-            qtd = "04"
+            qtd = 4
             break
         case 5:
-            qtd = "05"
+            qtd = 5
             break
         case 6:
-            qtd = "06"
+            qtd = 6
             break
     }
 }
 
-function busca(item, botao) {
-    let procura = listaBomba.indexOf(item)   
-    if (procura > -1) {
-        listaBomba.splice(procura, 1)
-        botao.style.backgroundColor = "white"
-        mostrarSaida()
-    } else {
-        listaBomba.push(item)
-        mostrarSaida()
+function busca(qtd, item, botao) {
+    let ver = 0
+    for(let i = 0; i < 6; i++){
+        let procura = listaBomba.indexOf(ver + item)   
+        if (procura > -1) { //se achar
+            listaBomba.splice(procura, 1)
+            botao.style.backgroundColor = "white"
+            mostrarSaida()
+            break
+        }
+        ver += 1
     }
+    if(ver == 6){
+        listaBomba.push(qtd + item)
+        mostrarSaida()
+    }      
 }
+
 //limpa todos os dados
 function limpar() {
     /*em construcao*/
@@ -54,12 +61,12 @@ function limpar() {
 function inserirReparo(botao) {
     botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd + " Reparo Bomba Alta", botao)
+    busca(qtd , " Reparo Bomba Alta", botao)
 }
 function inserirEsfera(botao) {
     botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd + " Esferas", botao)
+    busca(qtd , " Esferas", botao)
 }
 
 /*
@@ -132,7 +139,7 @@ function dadosServico() {
 function mostrarSaida() {
     dadosCliente()
     for (let i = 0; i < listaBomba.length; i++) {
-        saida.innerHTML += listaBomba[i] + '\n'
+        saida.innerHTML += `0` + listaBomba[i] + '\n'
     }
     dadosServico()
 }
