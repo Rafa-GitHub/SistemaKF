@@ -3,7 +3,7 @@ let listaMaoObra = []
 let listaBico = []
 let listaDadosServico = []
 let saida = document.getElementById("txtSaida")
-let qtd = 0
+let qtd = 0, mProp = 0, drv = 0
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
@@ -66,7 +66,64 @@ function inserirReparo(botao) {
 function inserirEsfera(botao) {
     botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd , " Esferas", botao)
+    busca(qtd , " Esfera", botao)
+}
+function inserirAspiracao(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Valvula Aspiracao", botao)
+}
+function inserirMprop(botao) {
+    if(mProp == 0){
+        numProp = " Valvula M-prop " + window.prompt("Numero M-prop: ")
+        mProp++
+    }else{
+        mProp--
+    } 
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , numProp, botao)
+}
+function inserirDrv(botao) {
+    if(drv == 0){
+        numDrv = " Valvula DRV " + window.prompt("Numero DRV: ")
+        drv++
+    }else{
+        drv--
+    } 
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , numDrv, botao)
+}
+function inserirMola(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Mola", botao)
+}
+function inserirRetentor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Retentor", botao)
+}
+function inserirEixo(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Eixo Acionamento", botao)
+}
+function inserirElemento(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Elemento", botao)
+}
+function inserirBaixa(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Bomba de Baixa", botao)
+}
+function inserirAlta(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Bomba de Alta", botao)
 }
 
 /*
