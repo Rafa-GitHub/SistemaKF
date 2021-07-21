@@ -3,7 +3,7 @@ let listaMaoObra = []
 let listaBico = []
 let listaDadosServico = []
 let saida = document.getElementById("txtSaida")
-let qtd = 0, mProp = 0, drv = 0
+let qtd = 0
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
@@ -74,26 +74,14 @@ function inserirAspiracao(botao) {
     busca(qtd , " Valvula Aspiracao", botao)
 }
 function inserirMprop(botao) {
-    if(mProp == 0){
-        numProp = " Valvula M-prop " + window.prompt("Numero M-prop: ")
-        mProp++
-    }else{
-        mProp--
-    } 
     botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd , numProp, botao)
+    busca(qtd ," Valvula M-prop", botao)
 }
 function inserirDrv(botao) {
-    if(drv == 0){
-        numDrv = " Valvula DRV " + window.prompt("Numero DRV: ")
-        drv++
-    }else{
-        drv--
-    } 
     botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd , numDrv, botao)
+    busca(qtd , " Valvula DRV", botao)
 }
 function inserirMola(botao) {
     botao.style.backgroundColor = "gray"
