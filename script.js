@@ -3,7 +3,7 @@ let listaMaoObra = []
 let listaBico = []
 let listaDadosServico = []
 let saida = document.getElementById("txtSaida")
-let qtd = 0
+let qtd = 0, contProp = 0, numProp = "", contDrv = 0, numDrv = ""
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
@@ -74,14 +74,32 @@ function inserirAspiracao(botao) {
     busca(qtd , " Valvula Aspiracao", botao)
 }
 function inserirMprop(botao) {
-    botao.style.backgroundColor = "gray"
-    radios(qtd)
-    busca(qtd ," Valvula M-prop", botao)
+    if(contProp == 0){
+        numProp = window.prompt("Informe o numero da M-prop:")
+        contProp = 1
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Valvula M-prop " + numProp, botao)
+    }else{
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Valvula M-prop " + numProp, botao)
+        contProp = 0
+    }
 }
 function inserirDrv(botao) {
-    botao.style.backgroundColor = "gray"
-    radios(qtd)
-    busca(qtd , " Valvula DRV", botao)
+    if(contDrv == 0){
+        numDrv = window.prompt("Informe o numero da DRV:")
+        contDrv = 1
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Valvula DRV " + numDrv, botao)
+    }else{
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Valvula DRV " + numDrv, botao)
+        contDrv = 0
+    }
 }
 function inserirMola(botao) {
     botao.style.backgroundColor = "gray"
