@@ -36,7 +36,7 @@ function radios(radios){
 
 function busca(qtd, item, botao) {
     let ver = 0
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < 7; i++){
         let procura = listaBomba.indexOf(ver + item)   
         if (procura > -1) { //se achar
             listaBomba.splice(procura, 1)
@@ -46,7 +46,7 @@ function busca(qtd, item, botao) {
         }
         ver += 1
     }
-    if(ver == 6){
+    if(ver == 7){
         listaBomba.push(qtd + item)
         mostrarSaida()
     }      
