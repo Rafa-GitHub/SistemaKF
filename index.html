@@ -34,9 +34,9 @@
     <hr>
     <nav id="menu">
         <a href="#">Inicio</a>
-        <a href="Injetores.html">Injetor</a>
-        <a href="Bombas.html">Bomba</a>
-        <a href="Unidade.html">Unidade</a>
+        <a href="#">Injetor</a>
+        <a href="#">Bomba</a>
+        <a href="#">Unidade</a>
     </nav>
     <main>
         <h2>Bomba Alta Pressao</h2>
@@ -60,7 +60,8 @@
                 05<input type="radio" name="radQtd" id="rad05" class="radios" oninput="radios(5)">
                 06<input type="radio" name="radQtd" id="rad06" class="radios" oninput="radios(6)">
             </div>
-            <div>
+            <div class="botao">
+                primeira div
                 <input type="button" value="Reparo Bomba" onclick="inserirReparo(this)">
                 <input type="button" value="Esfera Bomba" onclick="inserirEsfera(this)">
                 <input type="button" value="Valv. Aspiracao"
@@ -82,7 +83,46 @@
                 <input type="button" value="Bba Alta Completa"
                 onclick="inserirAlta(this)">
             </div>
-            <div>
+            <div class="botao">
+                segunda div
+                <input type="button" value="Retentor"
+                onclick="inserirRetentor(this)">
+                <input type="button" value="Eixo Acionamento"
+                onclick="inserirEixo(this)">
+                <input type="button" value="Elemento"
+                onclick="inserirElemento(this)">
+                <input type="button" value="Bba Baixa"
+                onclick="inserirBaixa(this)">
+                <input type="button" value="Bba Alta Completa"
+                onclick="inserirAlta(this)">
+            </div>
+            <div class="botao">
+                Terceira div
+                <input type="button" value="Retentor"
+                onclick="inserirRetentor(this)">
+                <input type="button" value="Eixo Acionamento"
+                onclick="inserirEixo(this)">
+                <input type="button" value="Elemento"
+                onclick="inserirElemento(this)">
+                <input type="button" value="Bba Baixa"
+                onclick="inserirBaixa(this)">
+                <input type="button" value="Bba Alta Completa"
+                onclick="inserirAlta(this)">
+            </div>
+            <div class="botao">
+                Quarta div
+                <input type="button" value="Retentor"
+                onclick="inserirRetentor(this)">
+                <input type="button" value="Eixo Acionamento"
+                onclick="inserirEixo(this)">
+                <input type="button" value="Elemento"
+                onclick="inserirElemento(this)">
+                <input type="button" value="Bba Baixa"
+                onclick="inserirBaixa(this)">
+                <input type="button" value="Bba Alta Completa"
+                onclick="inserirAlta(this)">
+            </div>
+            <div id="textSaida">
                 <textarea name="txtSaida" id="txtSaida" disabled="disabled" rows="10"></textarea>
             </div>
         </section>
