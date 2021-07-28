@@ -33,18 +33,22 @@ section{
     background-color: aliceblue;
     width: 98%;
     display: inline-flex;
+    justify-content: space-between;
 }
 
 .botao{
-    width: 23.75%;
+    width: 80%;
+    height: 300px;
+    background-color: cadetblue;
+    margin: 2%;
 }
 #textSaida{
-    width: 23.75%;
+    width: 50%;
     text-align: end;
 }
 
 .quantidade{
-        width: 5%;
+    width: 5%;
     padding: 0.5%;
     background-color: gray;
     display: inline-flex;
@@ -57,6 +61,11 @@ section{
 .quantidade > input{
     width: 40%;
     margin: 2% auto;
+}
+
+/*classe das divs que contem as divs com botoes*/
+.organiza{
+    width: 100%;
 }
 
 #dadosCliente{
@@ -81,9 +90,10 @@ section{
     background-color: cadetblue;
 }
 textarea{
-    width: 80%;
+    width: 100%;
     height: 100%;
     max-width: 300px;
+    min-width: 100px;
 }
 /*
     botoes dentro das divs
