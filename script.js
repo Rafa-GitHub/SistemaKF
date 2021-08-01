@@ -155,6 +155,20 @@ function inserirRevBbaServico(botao) {
     buscaServico("Revisao Bba Alta", botao)
 }
 
+function inserirTestBbaServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Teste Bba Alta", botao)
+}
+
+function inserirLimpBbaServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Limpeza Bba Alta", botao)
+}
+
+function inserirRetBbaServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Ret/Colocar Bba Alta", botao)
+}
 
 /*
     recebe dados do cliente,
