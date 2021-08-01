@@ -1,5 +1,5 @@
 let listaBomba = []
-let listaMaoObra = []
+let listaServico = []
 let listaBico = []
 let listaDadosServico = []
 let saida = document.getElementById("txtSaida")
@@ -52,12 +52,24 @@ function busca(qtd, item, botao) {
     }      
 }
 
+function buscaServico(servico, botao){
+    let procura = listaServico.indexOf(servico)
+    if(procura > -1){
+        listaServico.splice(procura, 1)
+        botao.style.backgroundColor = "white"
+        mostrarSaida()
+    }else{
+        listaServico.push(servico)
+        mostrarSaida()
+    }
+}
+
 //limpa todos os dados
 function limpar() {
     /*em construcao*/
 }
 
-//botoes para inserir item na lista
+//botoes para inserir item na lista bba alta
 function inserirReparo(botao) {
     botao.style.backgroundColor = "gray"
     radios(qtd)
@@ -132,6 +144,18 @@ function inserirAlta(botao) {
     busca(qtd , " Bomba de Alta", botao)
 }
 
+function inserirAnelFla(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Anel Flange Bba", botao)
+}
+
+function inserirRevBbaServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Revisao Bba Alta", botao)
+}
+
+
 /*
     recebe dados do cliente,
     valida campos nulos para saida.
@@ -203,6 +227,9 @@ function mostrarSaida() {
     dadosCliente()
     for (let i = 0; i < listaBomba.length; i++) {
         saida.innerHTML += `0` + listaBomba[i] + '\n'
+    }
+    for (let j = 0; j < listaServico.length; j++) {
+        saida.innerHTML += listaServico[j] + '\n'
     }
     dadosServico()
 }
