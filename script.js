@@ -1,9 +1,7 @@
-let listaBomba = []
+let listaPeca = []
 let listaServico = []
-let listaBico = []
-let listaDadosServico = []
 let saida = document.getElementById("txtSaida")
-let qtd = 0, contProp = 0, numProp = "", contDrv = 0, numDrv = ""
+let qtd = 0, contProp = 0, numProp = "", contDrv = 0, numDrv = "", contBico = 0, numBico = ""
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
@@ -37,9 +35,9 @@ function radios(radios){
 function busca(qtd, item, botao) {
     let ver = 0
     for(let i = 0; i < 7; i++){
-        let procura = listaBomba.indexOf(ver + item)   
+        let procura = listaPeca.indexOf(ver + item)   
         if (procura > -1) { //se achar
-            listaBomba.splice(procura, 1)
+            listaPeca.splice(procura, 1)
             botao.style.backgroundColor = "white"
             mostrarSaida()
             break
@@ -47,7 +45,7 @@ function busca(qtd, item, botao) {
         ver += 1
     }
     if(ver == 7){
-        listaBomba.push(qtd + item)
+        listaPeca.push(qtd + item)
         mostrarSaida()
     }      
 }
@@ -150,6 +148,7 @@ function inserirAnelFla(botao) {
     busca(qtd , " Anel Flange Bba", botao)
 }
 
+//inserir lista servico
 function inserirRevBbaServico(botao) {
     botao.style.backgroundColor = "gray"
     buscaServico("Revisao Bba Alta", botao)
@@ -168,6 +167,113 @@ function inserirLimpBbaServico(botao) {
 function inserirRetBbaServico(botao) {
     botao.style.backgroundColor = "gray"
     buscaServico("Ret/Colocar Bba Alta", botao)
+}
+
+//botoes para inserir lista injetor
+function inserirReparoInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Reparo Injetor", botao)
+}
+
+function inserirEsferaInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Esfera Injetor", botao)
+}
+
+function inserirCalcoInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Calco Injetor", botao)
+}
+
+function inserirArruelaInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Arruela Injetor", botao)
+}
+
+function inserirConjValvula(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Conjunto Valvula Injetor", botao)
+}
+
+function inserirBicoInjetor(botao) {
+    if(contBico == 0){
+        numBico = window.prompt("Informe o numero do Bico:")
+        contBico = 1
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Bico Injetor " + numBico, botao)
+    }else{
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Bico Injetor " + numBico, botao)
+        contBico = 0
+    }
+}
+
+function inserirPorcaInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Porca Injetor", botao)
+}
+
+function inserirAnelInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Anel Injetor", botao)
+}
+
+function inserirFiltroInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Filtro Injetor", botao)
+}
+
+function inserirSolenoideInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Solenoide Injetor", botao)
+}
+
+function inserirCompletoInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Injetor Completo", botao)
+}
+
+function inserirRecuperacaoInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Recuperacao Injetor", botao)
+}
+
+//inserir lista servico
+function inserirCalibInjServico(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Calibragem Injetor ", botao)
+}
+
+function inserirTestInjServico(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Teste Injetor ", botao)
+}
+
+function inserirLimpInjServico(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Limpeza Injetor ", botao)
+}
+
+function inserirRetInjServico(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Ret/Colocar Injetor ", botao)
 }
 
 /*
@@ -239,8 +345,8 @@ function dadosServico() {
 //mostra saida na area de texto
 function mostrarSaida() {
     dadosCliente()
-    for (let i = 0; i < listaBomba.length; i++) {
-        saida.innerHTML += `0` + listaBomba[i] + '\n'
+    for (let i = 0; i < listaPeca.length; i++) {
+        saida.innerHTML += `0` + listaPeca[i] + '\n'
     }
     for (let j = 0; j < listaServico.length; j++) {
         saida.innerHTML += listaServico[j] + '\n'
