@@ -38,7 +38,7 @@ section{
 
 .botao{
     width: 80%;
-    height: 300px;
+    height: auto;
     background-color: cadetblue;
     margin: 2%;
 }
@@ -48,19 +48,17 @@ section{
 }
 
 .quantidade{
-    width: 5%;
+    width: 10%;
     padding: 0.5%;
     background-color: gray;
     display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
 }
 .quantidade > input{
-    width: 40%;
-    margin: 2% auto;
+    width: 100%;
+    min-height: 3%;
+    margin-bottom: 200%;
 }
 
 /*classe das divs que contem as divs com botoes*/

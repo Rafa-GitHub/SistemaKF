@@ -52,7 +52,7 @@
         <hr>
         <section>
             <div class="quantidade">
-                01<input type="radio" name="radQtd" id="rad01" class="radios" oninput="radios(1)" checked>
+                <p>01</p><input type="radio" name="radQtd" id="rad01" class="radios" oninput="radios(1)" checked>
                 02<input type="radio" name="radQtd" id="rad02" class="radios" oninput="radios(2)">
                 03<input type="radio" name="radQtd" id="rad03" class="radios"
                 oninput="radios(3)">
@@ -62,68 +62,187 @@
             </div>
             <div class="organiza">
                 <div class="botao">
-                    primeira div
-                    <input type="button" value="Reparo Bomba" onclick="inserirReparo(this)">
-                    <input type="button" value="Esfera Bomba" onclick="inserirEsfera(this)">
-                    <input type="button" value="Valv. Aspiracao"
-                    onclick="inserirAspiracao(this)">
-                    <input type="button" value="Valv. Mprop"
-                    onclick="inserirMprop(this)">
-                    <input type="button" value="Valv. DRV"
-                    onclick="inserirDrv(this)">
-                    <input type="button" value="Mola"
-                    onclick="inserirMola(this)">
-                    <input type="button" value="Retentor"
-                    onclick="inserirRetentor(this)">
-                    <input type="button" value="Eixo Acionamento"
-                    onclick="inserirEixo(this)">
-                    <input type="button" value="Elemento"
-                    onclick="inserirElemento(this)">
-                    <input type="button" value="Bba Baixa"
-                    onclick="inserirBaixa(this)">
-                    <input type="button" value="Bba Alta Completa"
-                    onclick="inserirAlta(this)">
+                    <p>Injetores</p>
+                    <input type="button" value="Reparo Injetor" onclick="inserirReparoInjetor(this)">
+
+                    <input type="button" value="Esfera Injetor" onclick="inserirEsferaInjetor(this)">
+
+                    <input type="button" value="Calcos"
+                    onclick="inserirCalcoInjetor(this)">
+
+                    <input type="button" value="Arruela"
+                    onclick="inserirArruelaInjetor(this)">
+
+                    <input type="button" value="Conj. Valvula"
+                    onclick="inserirConjValvula(this)">
+
+                    <input type="button" value="Bico Injetor"
+                    onclick="inserirBicoInjetor(this)">
+
+                    <input type="button" value="Porca"
+                    onclick="inserirPorcaInjetor(this)">
+
+                    <input type="button" value="Anel Injetor"
+                    onclick="inserirAnelInjetor(this)">
+
+                    <input type="button" value="Filtro Injetor"
+                    onclick="inserirFiltroInjetor(this)">
+
+                    <input type="button" value="Solenoide injetor"
+                    onclick="inserirSolenoideInjetor(this)">
+
+                    <input type="button" value="Injetor Completo"
+                    onclick="inserirCompletoInjetor(this)">
+
+                    <input type="button" value="Recuperacao Injetor"
+                    onclick="inserirRecuperacaoInjetor(this)">
+
+                    <hr>
+
+                    <p>Servicos Injetor</p>
+
+                    <input type="button" value="Calibragem Injetor"
+                    onclick="inserirCalibInjServico(this)">
+
+                    <input type="button" value="Teste Injetor"
+                    onclick="inserirTestInjServico(this)">
+
+                    <input type="button" value="Limpeza Injetor"
+                    onclick="inserirLimpInjServico(this)">
+
+                    <input type="button" value="Ret/Colocar Injetor"
+                    onclick="inserirRetInjServico(this)">
+
                 </div>
                 <div class="botao">
-                    segunda div
-                    <input type="button" value="Retentor"
-                    onclick="inserirRetentor(this)">
-                    <input type="button" value="Eixo Acionamento"
-                    onclick="inserirEixo(this)">
-                    <input type="button" value="Elemento"
-                    onclick="inserirElemento(this)">
-                    <input type="button" value="Bba Baixa"
-                    onclick="inserirBaixa(this)">
-                    <input type="button" value="Bba Alta Completa"
-                    onclick="inserirAlta(this)">
+                    <p>Unidades Injetoras</p>
+
+                    <input type="button" value="Reparo Externo"
+                    onclick="inserirRepExUnidade(this)">
+
+                    <input type="button" value="Reparo Interno"
+                    onclick="inserirRepInUnidade(this)">
+
+                    <hr>
+
+                    <p>Servico Unidade</p>
+
+                    <input type="button" value="Teste Unidade"
+                    onclick="inserirTestUnidade(this)">
+
+                    <input type="button" value="Revisao Unidade"
+                    onclick="inserirRevUnidade(this)">
+
+                    <input type="button" value="Limpeza Unidade"
+                    onclick="inserirLimpUnidade(this)">
+
                 </div>
             </div>
             <div class="organiza">
                 <div class="botao">
-                    Terceira div
+                    <p>Bomba Alta</p>
+                    <input type="button" value="Reparo Bomba" onclick="inserirReparo(this)">
+
+                    <input type="button" value="Esfera Bomba" onclick="inserirEsfera(this)">
+
+                    <input type="button" value="Valv. Aspiracao"
+                    onclick="inserirAspiracao(this)">
+
+                    <input type="button" value="Valv. Mprop"
+                    onclick="inserirMprop(this)">
+
+                    <input type="button" value="Valv. DRV"
+                    onclick="inserirDrv(this)">
+
+                    <input type="button" value="Mola"
+                    onclick="inserirMola(this)">
+
                     <input type="button" value="Retentor"
                     onclick="inserirRetentor(this)">
+
                     <input type="button" value="Eixo Acionamento"
                     onclick="inserirEixo(this)">
+
                     <input type="button" value="Elemento"
                     onclick="inserirElemento(this)">
+
                     <input type="button" value="Bba Baixa"
                     onclick="inserirBaixa(this)">
+
                     <input type="button" value="Bba Alta Completa"
                     onclick="inserirAlta(this)">
+
+                    <input type="button" value="Anel Flange"
+                    onclick="inserirAnelFla(this)">
+
+                    <hr>
+
+                    <p>Servicos Bomba Alta</p>
+
+                    <input type="button" value="Revisao Bba Alta"
+                    onclick="inserirRevBbaServicoa(this)">
+
+                    <input type="button" value="Teste Bba Alta"
+                    onclick="inserirTestBbaServico(this)">
+
+                    <input type="button" value="Limpeza Bba Alta"
+                    onclick="inserirLimpBbaServico(this)">
+
+                    <input type="button" value="Ret/Colocar Bba Alta"
+                    onclick="inserirRetBbaServico(this)">
+
                 </div>
                 <div class="botao">
-                    Quarta div
-                    <input type="button" value="Retentor"
-                    onclick="inserirRetentor(this)">
-                    <input type="button" value="Eixo Acionamento"
-                    onclick="inserirEixo(this)">
-                    <input type="button" value="Elemento"
-                    onclick="inserirElemento(this)">
-                    <input type="button" value="Bba Baixa"
-                    onclick="inserirBaixa(this)">
-                    <input type="button" value="Bba Alta Completa"
-                    onclick="inserirAlta(this)">
+                    <p>Outros Pecas</p>
+                    <input type="button" value="Caneta Injetora"
+                    onclick="inserirCanPeca(this)">
+
+                    <input type="button" value="Anel Caneta"
+                    onclick="inserirAnCanPeca(this)">
+
+                    <input type="button" value="Filtro AR"
+                    onclick="inserirFiltroArPeca(this)">
+
+                    <input type="button" value="Filtro Diesel"
+                    onclick="inserirFiltroDiPeca(this)">
+
+                    <input type="button" value="Filtro Sedimentador"
+                    onclick="inserirFiltroSePeca(this)">
+
+                    <input type="button" value="Valvula Seguranca Rail"
+                    onclick="inserirValSegRailPeca(this)">
+
+                    <input type="button" value="20L Oleo Diesel"
+                    onclick="inserir20DieselPeca(this)">
+
+                    <input type="button" value="40L Oleo Diesel"
+                    onclick="inserir40DieselPeca(this)">
+
+                    <hr>
+
+                    <p>Outros Servicos</p>
+
+                    <input type="button" value="SCANNER"
+                    onclick="inserirScanServico(this)">
+
+                    <input type="button" value="Limpeza Tubo Rail"
+                    onclick="inserirLimpRailServico(this)">
+
+                    <input type="button" value="Limpeza Tanque"
+                    onclick="inserirLimpTanqServico(this)">
+
+                    <input type="button" value="Limpeza Catalizador"
+                    onclick="inserirLimpCatServico(this)">
+
+                    <input type="button" value="Descarb. Admissao"
+                    onclick="inserirDesAdmisServico(this)">
+
+                    <input type="button" value="Teste Intercooler"
+                    onclick="inserirTestInterServico(this)">
+
+                    <input type="button" value="Regulagem Valvulas"
+                    onclick="inserirRegValvServico(this)">
+
                 </div>
             </div>
                 <div id="textSaida">
