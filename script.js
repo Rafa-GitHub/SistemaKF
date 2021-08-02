@@ -1,7 +1,7 @@
 let listaPeca = []
 let listaServico = []
 let saida = document.getElementById("txtSaida")
-let qtd = 0, contProp = 0, numProp = "", contDrv = 0, numDrv = "", contBico = 0, numBico = ""
+let qtd = 0, contProp = 0, numProp = "", contDrv = 0, numDrv = "", contBico = 0, numBico = "", contFdiesel = 0, numFdiesel = "", contFsed = 0, numFsed = ""
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
@@ -251,29 +251,125 @@ function inserirRecuperacaoInjetor(botao) {
     busca(qtd , " Recuperacao Injetor", botao)
 }
 
-//inserir lista servico
+//inserir lista servico injetor
 function inserirCalibInjServico(botao) {
     botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd, " Calibragem Injetor ", botao)
+    busca(qtd, " Calibragem Injetor", botao)
 }
 
 function inserirTestInjServico(botao) {
     botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd, " Teste Injetor ", botao)
+    busca(qtd, " Teste Injetor", botao)
 }
 
 function inserirLimpInjServico(botao) {
     botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd, " Limpeza Injetor ", botao)
+    busca(qtd, " Limpeza Injetor", botao)
 }
 
 function inserirRetInjServico(botao) {
     botao.style.backgroundColor = "gray"
     radios(qtd)
-    busca(qtd, " Ret/Colocar Injetor ", botao)
+    busca(qtd, " Ret/Colocar Injetor", botao)
+}
+
+//inserir lista pecas unidades
+function inserirRepExUnidade(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Reparo Externo Unidade", botao)
+}
+
+function inserirRepInUnidade(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Reparo Geral Unidade", botao)
+}
+//inserir lista servico unidades
+function inserirTestUnidade(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Teste Unidade", botao)
+}
+
+function inserirRevUnidade(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Revisao Unidade", botao)
+}
+
+function inserirLimpUnidade(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Limpezao Unidade", botao)
+}
+
+//inserir outras pecas
+function inserirCanPeca(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Caneta Injetora", botao)
+}
+
+function inserirAnCanPeca(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Anel Caneta Injetora", botao)
+}
+
+function inserirFiltroArPeca(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Filtro AR", botao)
+}
+
+function inserirFiltroDiPeca(botao) {
+    if(contFdiesel == 0){
+        numFdiesel = window.prompt("Informe o numero do Filtro Diesel:")
+        contFdiesel = 1
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Filtro Diesel " + numFdiesel, botao)
+    }else{
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Filtro Diesel " + numFdiesel, botao)
+        contFdiesel = 0
+    }
+}
+
+function inserirFiltroSePeca(botao) {
+    if(contFsed == 0){
+        numFsed = window.prompt("Informe o numero do Filtro Sedimentador:")
+        contFsed = 1
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Filtro Sedimentador " + numFsed, botao)
+    }else{
+        botao.style.backgroundColor = "gray"
+        radios(qtd)
+        busca(qtd ," Filtro Sedimentador " + numFsed, botao)
+        contFsed = 0
+    }
+}
+
+function inserirValSegRailPeca(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd, " Valvula Seguranca RAIL", botao)
+}
+
+function inserir20DieselPeca(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("20 Litros Diesel", botao)
+}
+
+function inserir40DieselPeca(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("40 Litros Diesel", botao)
 }
 
 /*
