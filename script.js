@@ -372,6 +372,43 @@ function inserir40DieselPeca(botao) {
     buscaServico("40 Litros Diesel", botao)
 }
 
+//inserir outros servico na lista servico
+
+function inserirScanServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Diagnostico SCANNER", botao)
+}
+
+function inserirLimpRailServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Limpeza Tubo Rail", botao)
+}
+
+function inserirLimpTanqServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Limpeza Tanque", botao)
+}
+
+function inserirLimpCatServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Limpeza Catalizador", botao)
+}
+
+function inserirDesAdmisServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Descarbonizacao de Admissao", botao)
+}
+
+function inserirTestInterServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Teste Intercooler", botao)
+}
+
+function inserirRegValvServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Regulagem de Valvulas", botao)
+}
+
 /*
     recebe dados do cliente,
     valida campos nulos para saida.
@@ -395,21 +432,21 @@ function dadosCliente() {
         impressao no text area dos dados de cliente e lista de pecas
     */
     if (txtPlaca == "" && txtVeiculo != "" && km != "") {
-        saida.innerHTML = `Cliente.: ${txtCliente}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
+        saida.innerHTML = `Cliente.: ${txtCliente}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n─────────────────────────\n`
     } else if (km == "" && txtPlaca != "" && txtVeiculo != "") {
-        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
+        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nVeiculo.: ${txtVeiculo}\n─────────────────────────\n`
     } else if (txtVeiculo == "" && txtPlaca != "" && km != "") {
-        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nKM.:${km}\n────────────────────────────\n`
+        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nKM.:${km}\n─────────────────────────\n`
     } else if (txtPlaca == "" && km == "" && txtVeiculo != "") {
-        saida.innerHTML = `Cliente.: ${txtCliente}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
+        saida.innerHTML = `Cliente.: ${txtCliente}\nVeiculo.: ${txtVeiculo}\n─────────────────────────\n`
     } else if (txtPlaca == "" && txtVeiculo == "" && km != "") {
-        saida.innerHTML = `Cliente.: ${txtCliente}\nKM.:${km}\n────────────────────────────\n`
+        saida.innerHTML = `Cliente.: ${txtCliente}\nKM.:${km}\n─────────────────────────\n`
     } else if (km == "" && txtVeiculo == "" && txtPlaca != "") {
-        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\n────────────────────────────\n`
+        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\n─────────────────────────\n`
     } else if (txtPlaca == "" && txtVeiculo == "" && km == "") {
-        saida.innerHTML = `Cliente.: ${txtCliente}\n────────────────────────────\n`
+        saida.innerHTML = `Cliente.: ${txtCliente}\n─────────────────────────\n`
     } else {
-        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n────────────────────────────\n`
+        saida.innerHTML = `Cliente.: ${txtCliente}\nPlaca.: ${txtPlaca}\nKM.:${km}\nVeiculo.: ${txtVeiculo}\n─────────────────────────\n`
     }
 
 }
@@ -422,19 +459,19 @@ function dadosServico() {
     let txtAut = document.getElementById("selAutor")
     let autor = txtAut.value.toLocaleUpperCase()
     if (txtBomba != "" && marca != "" && autor != "") {
-        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
+        saida.innerHTML += `─────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
     } else if (txtBomba != "" && marca != "" && autor == "") {
-        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca
+        saida.innerHTML += `─────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca
     } else if (txtBomba != "" && marca == "" && autor != "") {
-        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Autor: ` + autor
+        saida.innerHTML += `─────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Autor: ` + autor
     } else if (txtBomba == "" && marca != "" && autor == "") {
-        saida.innerHTML += `────────────────────────────\n` + `Marca: ` + marca
+        saida.innerHTML += `─────────────────────────\n` + `Marca: ` + marca
     } else if (txtBomba == "" && marca == "" && autor != "") {
-        saida.innerHTML += `────────────────────────────\n` + `Autor: ` + autor
+        saida.innerHTML += `─────────────────────────\n` + `Autor: ` + autor
     } else if (txtBomba != "" && marca == "" && autor == "") {
-        saida.innerHTML += `────────────────────────────\n` + `Bomba: ` + txtBomba
+        saida.innerHTML += `─────────────────────────\n` + `Bomba: ` + txtBomba
     } else if (txtBomba == "" && marca != "" && autor != "") {
-        saida.innerHTML += `────────────────────────────\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
+        saida.innerHTML += `─────────────────────────\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
     }
 }
 
