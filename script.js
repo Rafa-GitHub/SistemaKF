@@ -86,7 +86,7 @@ function inserirAspiracao(botao) {
 }
 function inserirMprop(botao) {
     if(contProp == 0){
-        numProp = window.prompt("Informe o numero da M-prop:")
+        numProp = window.prompt("Informe o numero da M-prop:").toUpperCase()
         contProp = 1
         botao.style.backgroundColor = "gray"
         radios(qtd)
@@ -100,7 +100,7 @@ function inserirMprop(botao) {
 }
 function inserirDrv(botao) {
     if(contDrv == 0){
-        numDrv = window.prompt("Informe o numero da DRV:")
+        numDrv = window.prompt("Informe o numero da DRV:").toUpperCase()
         contDrv = 1
         botao.style.backgroundColor = "gray"
         radios(qtd)
@@ -203,7 +203,7 @@ function inserirConjValvula(botao) {
 
 function inserirBicoInjetor(botao) {
     if(contBico == 0){
-        numBico = window.prompt("Informe o numero do Bico:")
+        numBico = window.prompt("Informe o numero do Bico:").toUpperCase()
         contBico = 1
         botao.style.backgroundColor = "gray"
         radios(qtd)
@@ -238,6 +238,12 @@ function inserirSolenoideInjetor(botao) {
     botao.style.backgroundColor = "gray"
     radios(qtd)
     busca(qtd , " Solenoide Injetor", botao)
+}
+
+function inserirAnelSolenoideInjetor(botao) {
+    botao.style.backgroundColor = "gray"
+    radios(qtd)
+    busca(qtd , " Anel Solenoide Injetor", botao)
 }
 
 function inserirCompletoInjetor(botao) {
@@ -329,7 +335,7 @@ function inserirFiltroArPeca(botao) {
 
 function inserirFiltroDiPeca(botao) {
     if(contFdiesel == 0){
-        numFdiesel = window.prompt("Informe o numero do Filtro Diesel:")
+        numFdiesel = window.prompt("Informe o numero do Filtro Diesel:").toUpperCase()
         contFdiesel = 1
         botao.style.backgroundColor = "gray"
         radios(qtd)
@@ -344,7 +350,7 @@ function inserirFiltroDiPeca(botao) {
 
 function inserirFiltroSePeca(botao) {
     if(contFsed == 0){
-        numFsed = window.prompt("Informe o numero do Filtro Sedimentador:")
+        numFsed = window.prompt("Informe o numero do Filtro Sedimentador:").toUpperCase()
         contFsed = 1
         botao.style.backgroundColor = "gray"
         radios(qtd)
@@ -410,6 +416,11 @@ function inserirRegValvServico(botao) {
     buscaServico("Regulagem de Valvulas", botao)
 }
 
+function inserirRevChiServico(botao) {
+    botao.style.backgroundColor = "gray"
+    buscaServico("Revisao Chicote", botao)
+}
+
 /*
     recebe dados do cliente,
     valida campos nulos para saida.
@@ -454,13 +465,13 @@ function dadosCliente() {
 
 function dadosServico() {
     let txtbba = document.getElementById("txtbba")
-    let txtBomba = txtbba.value.toLocaleUpperCase()
+    let txtBomba = txtbba.value.toUpperCase()
     let txtinj = document.getElementById("txtinj")
-    let txtInjetor = txtinj.value.toLocaleUpperCase()
+    let txtInjetor = txtinj.value.toUpperCase()
     let selMar = document.getElementById("marca")
-    let marca = selMar.value.toLocaleUpperCase()
+    let marca = selMar.value.toUpperCase()
     let txtAut = document.getElementById("selAutor")
-    let autor = txtAut.value.toLocaleUpperCase()
+    let autor = txtAut.value.toUpperCase()
 
     if (txtBomba != "" && marca != "" && autor != "" && txtInjetor != "") {
         saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba + `\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
@@ -500,23 +511,6 @@ function dadosServico() {
         saida.innerHTML += `─────────────────────────\n` + `\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
     }
 
-    /*
-    if (txtBomba != "" && marca != "" && autor != "") {
-        saida.innerHTML += `─────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
-    } else if (txtBomba != "" && marca != "" && autor == "") {
-        saida.innerHTML += `─────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca
-    } else if (txtBomba != "" && marca == "" && autor != "") {
-        saida.innerHTML += `─────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Autor: ` + autor
-    } else if (txtBomba == "" && marca != "" && autor == "") {
-        saida.innerHTML += `─────────────────────────\n` + `Marca: ` + marca
-    } else if (txtBomba == "" && marca == "" && autor != "") {
-        saida.innerHTML += `─────────────────────────\n` + `Autor: ` + autor
-    } else if (txtBomba != "" && marca == "" && autor == "") {
-        saida.innerHTML += `─────────────────────────\n` + `Bomba: ` + txtBomba
-    } else if (txtBomba == "" && marca != "" && autor != "") {
-        saida.innerHTML += `─────────────────────────\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
-    }
-    */
 }
 
 //mostra saida na area de texto
