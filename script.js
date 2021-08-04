@@ -1,5 +1,6 @@
 let listaPeca = []
 let listaServico = []
+let listaDados = []
 let saida = document.getElementById("txtSaida")
 let qtd = 0, contProp = 0, numProp = "", contDrv = 0, numDrv = "", contBico = 0, numBico = "", contFdiesel = 0, numFdiesel = "", contFsed = 0, numFsed = ""
 /*
@@ -454,10 +455,52 @@ function dadosCliente() {
 function dadosServico() {
     let txtbba = document.getElementById("txtbba")
     let txtBomba = txtbba.value.toLocaleUpperCase()
+    let txtinj = document.getElementById("txtinj")
+    let txtInjetor = txtinj.value.toLocaleUpperCase()
     let selMar = document.getElementById("marca")
     let marca = selMar.value.toLocaleUpperCase()
     let txtAut = document.getElementById("selAutor")
     let autor = txtAut.value.toLocaleUpperCase()
+
+    if (txtBomba != "" && marca != "" && autor != "" && txtInjetor != "") {
+        saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba + `\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
+
+    } else if (txtBomba != "" && marca != "" && autor != "" && txtInjetor == "") {
+        saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
+
+    } else if (txtBomba != "" && marca != "" && autor == "" && txtInjetor == "") {
+        saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba + `\n` + `Marca: ` + marca
+
+    } else if (txtBomba != "" && marca == "" && autor == "" && txtInjetor == "") {
+        saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba
+
+    } else if (txtBomba == "" && marca != "" && autor == "" && txtInjetor == "") {
+        saida.innerHTML += `─────────────────────────\n` + `Marca: ` + marca  
+
+    } else if (txtBomba == "" && marca != "" && autor != ""  && txtInjetor == "") {
+        saida.innerHTML += `─────────────────────────\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
+
+    } else if (txtBomba == "" && marca != "" && autor == "" && txtInjetor != "") {
+        saida.innerHTML += `─────────────────────────\n` + `Marca: ` + marca + `\n` + `Injetor Nº: ` + txtInjetor
+    } else if (txtBomba == "" && marca == "" && autor != "" && txtInjetor == ""){
+        saida.innerHTML += `─────────────────────────\n` + `Autor: ` + autor 
+    } else if (txtBomba == "" && marca == "" && autor != "" && txtInjetor != ""){
+        saida.innerHTML += `─────────────────────────\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Autor: ` + autor
+    } else if(txtBomba != "" && marca == "" && autor != "" && txtInjetor == ""){
+        saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba + `\n` + `Autor: ` + autor
+    } else if (txtBomba == "" && marca == "" && autor == "" && txtInjetor != ""){
+        saida.innerHTML += `─────────────────────────\n` + `Injetor Nº: ` + txtInjetor 
+    } else if (txtBomba != "" && marca == "" && autor == "" && txtInjetor != ""){
+        saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba + `\n` + `Injetor Nº: ` + txtInjetor
+    } else if(txtBomba != "" && marca != "" && autor == "" && txtInjetor != ""){
+        saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba + `\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Marca: ` + marca 
+    } else if (txtBomba != "" && marca == "" && autor != "" && txtInjetor != ""){
+        saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba + `\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Autor: ` + autor
+    } else if(txtBomba == "" && marca != "" && autor != "" && txtInjetor != ""){
+        saida.innerHTML += `─────────────────────────\n` + `\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
+    }
+
+    /*
     if (txtBomba != "" && marca != "" && autor != "") {
         saida.innerHTML += `─────────────────────────\n` + `Bomba: ` + txtBomba + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
     } else if (txtBomba != "" && marca != "" && autor == "") {
@@ -473,6 +516,7 @@ function dadosServico() {
     } else if (txtBomba == "" && marca != "" && autor != "") {
         saida.innerHTML += `─────────────────────────\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
     }
+    */
 }
 
 //mostra saida na area de texto
