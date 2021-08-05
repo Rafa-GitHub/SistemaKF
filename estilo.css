@@ -2,7 +2,11 @@
 
 :root{
     /*Paleta de cores*/
-    --corPrincipal: rgba(65, 234, 240, 0.425);
+    --corForte: #1D566B;
+    --corFortinha: #3D5F6B;
+    --corMedio: #3294B8; 
+    --corFraquinha: #3FBEEB;
+    --corFraca: #88D3EE;
 }
 
 *{
@@ -20,7 +24,7 @@ hr{
 }
 
 body{
-    background-color: var(--corPrincipal);
+    background-color: var(--corFraca);
 }
 
 .dados{
@@ -30,7 +34,7 @@ body{
 
 section{
     margin-left: 1%;
-    background-color: aliceblue;
+    background-color: var(--corFraca);
     width: 98%;
     display: inline-flex;
     justify-content: space-between;
@@ -50,7 +54,7 @@ section{
 .quantidade{
     width: 10%;
     padding: 0.5%;
-    background-color: gray;
+    background-color: var(--corFraca);
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -64,16 +68,26 @@ section{
 /*classe das divs que contem as divs com botoes*/
 .organiza{
     width: 100%;
+    text-align: center;
 }
 
 #dadosCliente{
     width: 90%;
-    background-color: aqua;
+    background-color: var(--corFraquinha);
+    margin: 1%;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
 }
 
 #dadosCliente > p{
     display: inline;
 }
+
+#dadosCliente h2{
+    margin-bottom: 2%;
+}
+
 #autor{
     width: 15%;
 }
@@ -90,7 +104,7 @@ section{
 textarea{
     width: 100%;
     height: 100%;
-    max-width: 300px;
+    max-width: 350px;
     min-width: 100px;
 }
 /*
