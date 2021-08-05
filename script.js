@@ -508,7 +508,7 @@ function dadosServico() {
     } else if (txtBomba != "" && marca == "" && autor != "" && txtInjetor != ""){
         saida.innerHTML += `─────────────────────────\n` + `Bomba Nº: ` + txtBomba + `\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Autor: ` + autor
     } else if(txtBomba == "" && marca != "" && autor != "" && txtInjetor != ""){
-        saida.innerHTML += `─────────────────────────\n` + `\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
+        saida.innerHTML += `─────────────────────────\n` + `Injetor Nº: ` + txtInjetor + `\n` + `Marca: ` + marca + `\n` + `Autor: ` + autor
     }
 
 }
