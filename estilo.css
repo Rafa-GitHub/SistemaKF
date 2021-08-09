@@ -89,11 +89,13 @@ section{
 }
 
 #autor{
+    text-align: center;
     width: 15%;
 }
 
 #autor > select{
-    width: 100%;
+    width: 80%;
+    border-radius: 5px;
 }
 
 #menu{
@@ -106,15 +108,30 @@ textarea{
     height: 100%;
     max-width: 350px;
     min-width: 100px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
+    background-color: rgba(255, 255, 255, 0.815);
 }
 /*
     botoes dentro das divs
     ex: Reparo Bomba, Retentor.
 */
+.botao{
+    border-radius: 5px;
+    height: 500px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
+}
 .botao > input{ 
     width: 40%;
-    height: 40px;
+    height: 30px;
     margin: 1%;
-    font-size: 10px;
+    font-size: 14px;
+}
+.botao > p{
+    background-color: var(--corFortinha);
+    padding: 2%;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 1.4em;
+    color: white;
+    margin: 4% 0%;
 }
 
