@@ -116,6 +116,7 @@ textarea{
     ex: Reparo Bomba, Retentor.
 */
 .botao{
+    background-color: var(--corMedio);
     border-radius: 5px;
     height: 500px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
@@ -127,7 +128,7 @@ textarea{
     font-size: 14px;
 }
 .botao > p{
-    background-color: var(--corFortinha);
+    background-color: var(--corForte);
     padding: 2%;
     border-radius: 5px 5px 0px 0px;
     font-size: 1.4em;
