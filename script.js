@@ -340,6 +340,10 @@ function inserirScanServico(botao) {
     buscaServico("Diagnostico SCANNER", botao)
 }
 
+function inserirScanOriServico(botao) {
+    buscaServico("Diagnostico SCANNER Original", botao)
+}
+
 function inserirLimpRailServico(botao) {
     buscaServico("Limpeza Tubo Rail", botao)
 }

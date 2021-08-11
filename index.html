@@ -38,7 +38,7 @@
         <a href="#">Unidade</a>
     </nav>
     <main>
-        <h2>Dados Servico</h2>
+        <h2 id="dadosServico">Dados Servico</h2>
         <p>Nº Bomba: <input type="text" name="bomba" id="txtbba" class="dados" oninput="mostrarSaida()">
         Nº Injetor: <input type="text" name="injetor" id="txtinj" class="dados" oninput="mostrarSaida()">    
         Marca: <select name="marca" id="marca" value="sel" oninput="mostrarSaida()">
@@ -218,6 +218,9 @@
 
                     <input type="button" value="SCANNER"
                     onclick="inserirScanServico(this)">
+
+                    <input type="button" value="SCANNER Original"
+                    onclick="inserirScanOriServico(this)">
 
                     <input type="button" value="Limpeza Tubo Rail"
                     onclick="inserirLimpRailServico(this)">

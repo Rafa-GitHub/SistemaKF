@@ -12,6 +12,7 @@
 *{
     margin: 0%;
     padding: 0%;
+    font-family: sans-serif;
 }
 
 main{
@@ -53,6 +54,8 @@ section{
 }
 
 textarea{
+    padding: 5px;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     width: 100%;
@@ -61,6 +64,10 @@ textarea{
     min-width: 100px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
     background-color: rgba(255, 255, 255, 0.815);
+}
+
+#dadosServico{
+    margin: 1% 0%;
 }
 
 .quantidade{
@@ -104,6 +111,7 @@ textarea{
     text-align: center;
     max-width: 10%;
     width: 15%;
+    margin: 1%;
 }
 
 #autor > select{
@@ -129,6 +137,7 @@ textarea{
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
 }
 .botao > input{ 
+    padding: 2px;
     width: 40%;
     height: 40px;
     margin: 1%;
@@ -144,5 +153,11 @@ textarea{
     font-size: 1.4em;
     color: white;
     margin: 4% 0%;
+}
+
+.botao > input:hover{
+    color: white;
+    background-color: var(--corFortinha);
+    transition-duration: 0.2s;
 }
 
