@@ -42,35 +42,35 @@ section{
     justify-content: space-between;
 }
 
-.botao{
-    width: 80%;
-    height: auto;
-    background-color: cadetblue;
-    margin: 2%;
-}
+
 #textSaida{
     width: 60%;
     text-align: end;
 }
 
 textarea{
-    padding: 5px;
+    padding: 3px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
+    color: rgba(0, 0, 0, 0.726);
     width: 100%;
-    height: 100%;
+    height: 90%;
     max-width: 350px;
     min-width: 100px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.295);
     background-color: rgba(255, 255, 255, 0.815);
+    margin-top: 12%;
 }
 
 #dadosServico{
     margin: 1% 0%;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
 }
 
 .quantidade{
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
+    font-weight: bold;
     width: 10%;
     padding: 0.5%;
     background-color: var(--corFraca);
@@ -81,7 +81,7 @@ textarea{
 .quantidade > input{
     width: 100%;
     min-height: 3%;
-    margin-bottom: 150%;
+    margin-bottom: 90%;
 }
 
 /*classe das divs que contem as divs com botoes*/
@@ -105,6 +105,7 @@ textarea{
 
 #dadosCliente h2{
     margin-bottom: 2%;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
 }
 
 #autor{
@@ -112,11 +113,13 @@ textarea{
     max-width: 10%;
     width: 15%;
     margin: 1%;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
+    font-weight: bold;
 }
 
 #autor > select{
     width: 80%;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 #menu{
@@ -133,20 +136,24 @@ textarea{
 .botao{
     background-color: var(--corMedio);
     border-radius: 5px;
-    height: 580px;
+    height: 540px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
+    margin: 8%;
 }
 .botao > input{ 
-    padding: 2px;
     width: 40%;
-    height: 40px;
+    height: 33px;
     margin: 1%;
-    font-size: 14px;
+    font-size: 15px;
     white-space: inherit;
     border-radius: 5px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.445);
+    color: black;
+    border: outset;
+    background-color: white;
 }
 .botao > p{
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
     background-color: var(--corForte);
     padding: 2%;
     border-radius: 5px 5px 0px 0px;
@@ -157,7 +164,7 @@ textarea{
 
 .botao > input:hover{
     color: white;
-    background-color: var(--corFortinha);
+    background-color: var(--corMedio);
     transition-duration: 0.2s;
 }
 

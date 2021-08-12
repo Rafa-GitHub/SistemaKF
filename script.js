@@ -41,6 +41,7 @@ function busca(qtd, item, botao) {
             listaPeca.splice(procura, 1)
             botao.style.backgroundColor = "white"
             botao.style.color = "black"
+            botao.style.border = "outset"
             mostrarSaida()
             break
         }
@@ -49,6 +50,7 @@ function busca(qtd, item, botao) {
     if(ver == 7){
         botao.style.backgroundColor = "#1D566B"
         botao.style.color = "white"
+        botao.style.border = "inset"
         listaPeca.push(qtd + item)
         mostrarSaida()
     }      
@@ -60,10 +62,12 @@ function buscaServico(servico, botao){
         listaServico.splice(procura, 1)
         botao.style.backgroundColor = "white"
         botao.style.color = "black"
+        botao.style.border = "outset"
         mostrarSaida()
     }else{
         botao.style.backgroundColor = "#1D566B"
         botao.style.color = "white"
+        botao.style.border = "inset"
         listaServico.push(servico)
         mostrarSaida()
     }
@@ -81,11 +85,11 @@ function inserirReparo(botao) {
 }
 function inserirEsfera(botao) {
     radios(qtd)
-    busca(qtd , " Esfera", botao)
+    busca(qtd , " Esfera Bomba Alta", botao)
 }
 function inserirAspiracao(botao) {
     radios(qtd)
-    busca(qtd , " Valvula Aspiracao", botao)
+    busca(qtd , " Valvula Aspiracao Bba", botao)
 }
 function inserirMprop(botao) {
     if(contProp == 0){
@@ -113,19 +117,19 @@ function inserirDrv(botao) {
 }
 function inserirMola(botao) {
     radios(qtd)
-    busca(qtd , " Mola", botao)
+    busca(qtd , " Mola Bomba Alta", botao)
 }
 function inserirRetentor(botao) {
     radios(qtd)
-    busca(qtd , " Retentor", botao)
+    busca(qtd , " Retentor Bomba Alta", botao)
 }
 function inserirEixo(botao) {
     radios(qtd)
-    busca(qtd , " Eixo Acionamento", botao)
+    busca(qtd , " Eixo Acionamento Bba", botao)
 }
 function inserirElemento(botao) {
     radios(qtd)
-    busca(qtd , " Elemento", botao)
+    busca(qtd , " Elemento Bomba Alta", botao)
 }
 function inserirBaixa(botao) {
     radios(qtd)
@@ -139,6 +143,11 @@ function inserirAlta(botao) {
 function inserirAnelFla(botao) {
     radios(qtd)
     busca(qtd , " Anel Flange Bba", botao)
+}
+
+function inserirValvCasc(botao) {
+    radios(qtd)
+    busca(qtd , " Valvula Cascata Bba", botao)
 }
 
 //inserir lista servico
