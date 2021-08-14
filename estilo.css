@@ -60,12 +60,13 @@ textarea{
     min-width: 100px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.295);
     background-color: rgba(255, 255, 255, 0.815);
-    margin-top: 12%;
+    margin-top: 5%;
 }
 
 #dadosServico{
     margin: 1% 0%;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
+    font-size: 25px;
 }
 
 .quantidade{
@@ -97,6 +98,7 @@ textarea{
     padding: 2%;
     border-radius: 5px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
+    font-size: 20px;
 }
 
 #dadosCliente > p{
@@ -139,6 +141,7 @@ textarea{
     height: 540px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
     margin: 8%;
+    margin-top: 0%;
 }
 .botao > input{ 
     width: 40%;
