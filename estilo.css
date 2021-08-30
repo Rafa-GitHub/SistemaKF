@@ -4,6 +4,7 @@
     /*Paleta de cores*/
     --corForte: #1D566B;
     --corFortinha: #3D5F6B;
+    --corMedio_forte: #2a83a3;
     --corMedio: #3294B8; 
     --corFraquinha: #3FBEEB;
     --corFraca: #88D3EE;
@@ -139,10 +140,19 @@ textarea{
     background-color: var(--corMedio);
     border-radius: 5px;
     height: 540px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.26);
     margin: 8%;
     margin-top: 0%;
 }
+
+.organiza > .botao:hover{
+    background-color: var(--corMedio_forte);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.425);
+    margin-top: 0%;
+    margin-left: 7%;
+    margin-right: 7%;
+    transition-duration: 0.2s;
+}
+
 .botao > input{ 
     width: 40%;
     height: 33px;
@@ -150,7 +160,6 @@ textarea{
     font-size: 15px;
     white-space: inherit;
     border-radius: 5px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.445);
     color: black;
     border: outset;
     background-color: white;
@@ -170,4 +179,6 @@ textarea{
     background-color: var(--corMedio);
     transition-duration: 0.2s;
 }
+
+
 
