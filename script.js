@@ -2,7 +2,7 @@ let listaPeca = []
 let listaServico = []
 let listaDados = []
 let saida = document.getElementById("txtSaida")
-let qtd = 0, contProp = 0, numProp = "", contDrv = 0, numDrv = "", contBico = 0, numBico = "", contFdiesel = 0, numFdiesel = "", contFsed = 0, numFsed = ""
+let qtd = 0, contProp = 0, numProp = "", contDrv = 0, numDrv = "", contBico = 0, numBico = "", contFdiesel = 0, numFdiesel = "", contFsed = 0, numFsed = "", contBicoU = 0, numBicoU = ""
 /*
     verifica a existencia do item na lista,
     passado como parametro pelos botoes.
@@ -272,6 +272,50 @@ function inserirRepInUnidade(botao) {
     radios(qtd)
     busca(qtd, " Reparo Geral Unidade", botao)
 }
+
+function inserirAnelCanUnidade(botao){
+    radios(qtd)
+    busca(qtd, " Anel Caneta", botao)
+}
+
+function inserirAnelInjUnidade(botao){
+    radios(qtd)
+    busca(qtd, " Anel Injetor", botao)
+}
+
+function inserirPinInjUnidade(botao){
+    radios(qtd)
+    busca(qtd, " Pino Injetor", botao)
+}
+
+function inserirDiscInjUnidade(botao){
+    radios(qtd)
+    busca(qtd, " Disco Injetor", botao)
+}
+
+function inserirMolInjUnidade(botao){
+    radios(qtd)
+    busca(qtd, " Mola Injetor", botao)
+}
+
+function inserirBicoUnidade(botao) {
+    if(contBicoU == 0){
+        numBicoU = window.prompt("Informe o numero do Bico:").toUpperCase()
+        contBicoU = 1
+        radios(qtd)
+        busca(qtd ," Bico Injetor " + numBicoU, botao)
+    }else{
+        radios(qtd)
+        busca(qtd ," Bico Injetor " + numBicoU, botao)
+        contBicoU = 0
+    }
+}
+
+function inserirCalcoUnidade(botao){
+    radios(qtd)
+    busca(qtd, " Calco Injetor", botao)
+}
+
 //inserir lista servico unidades
 function inserirTestUnidade(botao) {
     radios(qtd)
@@ -286,6 +330,21 @@ function inserirRevUnidade(botao) {
 function inserirLimpUnidade(botao) {
     radios(qtd)
     busca(qtd, " Limpezao Unidade", botao)
+}
+
+function inserirUltrassomUnidade(botao) {
+    radios(qtd)
+    busca(qtd, " Ultrassom Injetor", botao)
+}
+
+function inserirRetUnidade(botao) {
+    radios(qtd)
+    busca(qtd, " Ret/Colocar Unidade", botao)
+}
+
+function inserirRetInjUnidade(botao) {
+    radios(qtd)
+    busca(qtd, " Ret/Colocar Injetor", botao)
 }
 
 //inserir outras pecas
