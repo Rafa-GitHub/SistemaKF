@@ -3,8 +3,7 @@
 :root{
     /*Paleta de cores*/
     --corForte: #1D566B;
-    --corFortinha: #3D5F6B;
-    --corMedio_forte: #2a83a3;
+    --corFortinha: #3d5f6bb2;
     --corMedio: #3294B8; 
     --corFraquinha: #3FBEEB;
     --corFraca: #88D3EE;
@@ -145,7 +144,7 @@ textarea{
 }
 
 .organiza > .botao:hover{
-    background-color: var(--corMedio_forte);
+    background-color: var(--corFortinha);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.425);
     margin-top: 0%;
     margin-left: 7%;
@@ -161,7 +160,7 @@ textarea{
     white-space: inherit;
     border-radius: 5px;
     color: black;
-    border: outset;
+    border: none;
     background-color: white;
 }
 .botao > p{
@@ -176,6 +175,8 @@ textarea{
 
 .botao > input:hover{
     color: white;
+    font-weight: bold;
+    font-size: 14px;
     background-color: var(--corMedio);
     transition-duration: 0.2s;
 }
