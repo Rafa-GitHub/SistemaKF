@@ -176,7 +176,6 @@ textarea{
 .botao > input:hover{
     color: white;
     font-weight: bold;
-    font-size: 14px;
     background-color: var(--corMedio);
     transition-duration: 0.2s;
 }

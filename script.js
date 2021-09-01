@@ -41,7 +41,6 @@ function busca(qtd, item, botao) {
             listaPeca.splice(procura, 1)
             botao.style.backgroundColor = "white"
             botao.style.color = "black"
-            botao.style.border = "outset"
             mostrarSaida()
             break
         }
@@ -50,7 +49,6 @@ function busca(qtd, item, botao) {
     if(ver == 7){
         botao.style.backgroundColor = "#1D566B"
         botao.style.color = "white"
-        botao.style.border = "inset"
         listaPeca.push(qtd + item)
         mostrarSaida()
     }      
