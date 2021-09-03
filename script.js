@@ -60,20 +60,13 @@ function buscaServico(servico, botao){
         listaServico.splice(procura, 1)
         botao.style.backgroundColor = "white"
         botao.style.color = "black"
-        botao.style.border = "outset"
         mostrarSaida()
     }else{
         botao.style.backgroundColor = "#1D566B"
         botao.style.color = "white"
-        botao.style.border = "inset"
         listaServico.push(servico)
         mostrarSaida()
     }
-}
-
-//limpa todos os dados
-function limpar() {
-    /*em construcao*/
 }
 
 //botoes para inserir item na lista bba alta
