@@ -320,7 +320,7 @@ function inserirRevUnidade(botao) {
 
 function inserirLimpUnidade(botao) {
     radios(qtd)
-    busca(qtd, " Limpezao Unidade", botao)
+    busca(qtd, " Limpeza Unidade", botao)
 }
 
 function inserirUltrassomUnidade(botao) {
